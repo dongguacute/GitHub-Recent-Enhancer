@@ -2,6 +2,8 @@
   "name": "github-recent-enhancer",
   "version": "1.0.0",
   "description": "A browser extension to enhance GitHub recent activity",
+  "license": "MIT",
+  "author": "Cherry Fu<me@dgct.cc>",
   "scripts": {
     "dev": "vite build --watch --mode development",
     "build": "tsc && vite build",
