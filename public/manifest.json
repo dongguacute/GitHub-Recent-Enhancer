@@ -4,12 +4,18 @@
   "version": "1.0.0",
   "description": "Restore the “Recent” feature on the GitHub web version (which was previously removed by GitHub for unknown reasons).",
   "permissions": ["storage", "sidePanel"],
+  "icons": {
+    "16": "logo-16.png",
+    "32": "logo-32.png",
+    "48": "logo-48.png",
+    "128": "logo-128.png"
+  },
   "action": {
     "default_title": "GitHub Recent Enhancer",
     "default_icon": {
-      "16": "logo.png",
-      "32": "logo.png",
-      "48": "logo.png"
+      "16": "logo-16.png",
+      "32": "logo-32.png",
+      "48": "logo-48.png"
     }
   },
   "side_panel": {
