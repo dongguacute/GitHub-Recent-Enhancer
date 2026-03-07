@@ -3,16 +3,13 @@
   "name": "GitHub Recent Enhancer",
   "version": "1.0.0",
   "description": "Enhance GitHub recent activity experience",
-  "permissions": ["storage"],
+  "permissions": ["storage", "sidePanel"],
   "action": {
-    "default_popup": "popup.html"
+    "default_title": "GitHub Recent Enhancer"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://github.com/*"],
-      "js": ["content.js"]
-    }
-  ],
+  "side_panel": {
+    "default_path": "public/sidepanel.html"
+  },
   "background": {
     "service_worker": "background.js",
     "type": "module"
