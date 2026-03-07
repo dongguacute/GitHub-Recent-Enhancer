@@ -2,10 +2,15 @@
   "manifest_version": 3,
   "name": "GitHub Recent Enhancer",
   "version": "1.0.0",
-  "description": "Enhance GitHub recent activity experience",
+  "description": "Restore the “Recent” feature on the GitHub web version (which was previously removed by GitHub for unknown reasons).",
   "permissions": ["storage", "sidePanel"],
   "action": {
-    "default_title": "GitHub Recent Enhancer"
+    "default_title": "GitHub Recent Enhancer",
+    "default_icon": {
+      "16": "logo.png",
+      "32": "logo.png",
+      "48": "logo.png"
+    }
   },
   "side_panel": {
     "default_path": "public/sidepanel.html"
