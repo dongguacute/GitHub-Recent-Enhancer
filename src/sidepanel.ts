@@ -17,7 +17,7 @@ function getRepoName(repoUrl: string): string {
   return `${parts[parts.length - 2]}/${parts[parts.length - 1]}`;
 }
 
-/* PR 与 Issue 均为未合并/开放状态，统一使用 open 图标（圆形） */
+/* Both PR and Issue are in open/unmerged state; use open icon (circle) uniformly */
 const OPEN_ICON = '<svg class="item-icon open" viewBox="0 0 16 16" width="14" height="14"><path fill="currentColor" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/><path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"/></svg>';
 const ISSUE_ICON = '<svg class="item-icon issue" viewBox="0 0 16 16" width="14" height="14"><path fill="currentColor" d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/><path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0Z"/></svg>';
 
