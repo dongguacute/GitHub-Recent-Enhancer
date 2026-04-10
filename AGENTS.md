@@ -1,0 +1,1 @@
+1. Must use pnpm as a package manager

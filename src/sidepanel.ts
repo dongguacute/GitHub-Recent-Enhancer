@@ -1,4 +1,4 @@
-import { getRecent } from './api';
+import { getRecent, isWithinRecentActivityWindow } from './api';
 
 const CACHE_KEY = 'ghre_cache';
 const CACHE_DURATION = 5 * 60 * 1000;
@@ -86,9 +86,7 @@ async function loadActivity(): Promise<void> {
       items = (data.items || []).slice(0, 30);
       await setCachedItems(items);
     }
-    const oneMonthAgo = new Date();
-    oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
-    items = items.filter((item) => new Date(item.updated_at || 0) > oneMonthAgo);
+    items = items.filter((item) => isWithinRecentActivityWindow(item.updated_at));
     if (items.length === 0) showEmpty();
     else document.getElementById('content')!.innerHTML = renderList(items);
   } catch (e) {
